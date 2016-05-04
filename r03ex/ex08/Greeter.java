@@ -20,7 +20,6 @@ public class Greeter implements Runnable {
         g2.run();
     }
 
-
     @Override
     public void run() {
        for(int i = 0; i < n; i++){
