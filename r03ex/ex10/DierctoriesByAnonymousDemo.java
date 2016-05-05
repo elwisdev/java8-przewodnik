@@ -15,7 +15,7 @@ public class DierctoriesByAnonymousDemo {
 
         f = new File("c:/");
 
-        FileFilter fileFilter = new FileFilter() {
+        paths = f.listFiles(new FileFilter() {
             @Override
             public boolean accept(File pathname) {
                 if (pathname.isDirectory())
@@ -23,9 +23,7 @@ public class DierctoriesByAnonymousDemo {
                 else
                     return false;
             }
-        };
-
-        paths = f.listFiles(fileFilter);
+        });
 
         for(File path : paths) {
             System.out.println(path.getName());

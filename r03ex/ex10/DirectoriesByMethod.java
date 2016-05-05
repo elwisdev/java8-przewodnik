@@ -15,9 +15,7 @@ public class DirectoriesByMethod {
 
         f = new File("c:/");
 
-        FileFilter fileFilter = filtr();
-
-        paths = f.listFiles(fileFilter);
+        paths = f.listFiles(filtr());
 
         for (File path : paths) {
             System.out.println(path.getName());
