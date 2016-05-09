@@ -1,8 +1,6 @@
 package r03ex.ex11;
 
 import java.io.File;
-import java.io.FilenameFilter;
-import java.util.ArrayList;
 
 /**
  * Created by WISNIEWSKI.LUKASZ on 2016-05-05.
@@ -25,7 +23,5 @@ public class FilesFromDirectory {
             System.out.println(file);
         }
     }
-
-
 
 }
