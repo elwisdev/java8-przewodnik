@@ -29,7 +29,9 @@ public class FilesDirectoriesSortDemo {
 
         File[] tab1 = f.listFiles();
 
-        Arrays.sort(tab1, FruitNameComparator);
+        //Arrays.sort(tab1, NameComparator);
+
+        Arrays.sort(tab1, (File o1, File o2) -> o2.getName().toUpperCase().compareTo(o1.getName().toUpperCase()));
 
         for(File file : tab1) {
             System.out.println(file);
@@ -37,12 +39,12 @@ public class FilesDirectoriesSortDemo {
 
     }
 
-    public static Comparator<File> FruitNameComparator = new Comparator<File>() {
+    public static Comparator<File> NameComparator = new Comparator<File>() {
 
-        public int compare(File fruit1, File fruit2) {
+        public int compare(File name1, File name2) {
 
-            String fruitName1 = fruit1.getName().toUpperCase();
-            String fruitName2 = fruit2.getName().toUpperCase();
+            String fruitName1 = name1.getName().toUpperCase();
+            String fruitName2 = name2.getName().toUpperCase();
 
             //ascending order
             //return fruitName1.compareTo(fruitName2);
